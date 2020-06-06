@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: covid19-spring-boot-dashboard
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: kumajaip
+Implementation-Vendor-Id: com.jp.covid19
+Build-Jdk: 1.8.0_211
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/spring-boot-login-registration-covid19-dashboard
+Created-By: Maven Integration for Eclipse
+

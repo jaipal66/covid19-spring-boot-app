@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+<!-- <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous"> -->
+
+<title>Crona Virus Application Tracker</title>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}">Cronavirus
+					Tracker Application</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<p>
+					Welcome <span sec:authentication="principal.username"></span>
+				</p>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+		<h3>
+			<p> This application lists the current number of cases reported
+				across the globe
+			</p>
+		</h3>
+		<div class="jumbotron">
+			<h1 class="display-4" th:text="${TOTAL_CASES}"></h1>
+			<p class="lead">Total cases reported today.</p>
+			<hr class="my-4">
+			<p>
+				<span>New cases reported since previous day </span>
+				<span th:text="${TOTAL_NEW_CASES}"></span>
+			</p>
+		</div>
+
+		<table class="table">
+			<tr>
+				<th>Country</th>
+				<th>State</th>
+				<th>Latest Total Cases</th>
+				<th>Changes From Yesterday</th>
+			</tr>
+			<tr th:each="locationStat : ${LOCATION_STATS}">
+				<td th:text="${locationStat.country}"></td>
+				<td th:text="${locationStat.state}"></td>
+				<td th:text="${locationStat.latestTotalCases}"></td>
+				<td th:text="${locationStat.chnagesFromYesterday}"></td>
+			</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
