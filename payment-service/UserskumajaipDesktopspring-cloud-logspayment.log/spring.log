@@ -1,0 +1,73 @@
+2020-06-10 23:50:59.881  INFO 14904 --- [main] c.jp.payment.PaymentServiceApplication   : No active profile set, falling back to default profiles: default
+2020-06-10 23:51:00.573  INFO 14904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-10 23:51:00.591  INFO 14904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 JPA repository interfaces.
+2020-06-10 23:51:00.820  INFO 14904 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=94b2576d-e657-3dc1-984e-db841aed456a
+2020-06-10 23:51:01.162  INFO 14904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-10 23:51:01.173  INFO 14904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 23:51:01.173  INFO 14904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-10 23:51:01.340  INFO 14904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 23:51:01.340  INFO 14904 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1442 ms
+2020-06-10 23:51:01.469  INFO 14904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 23:51:01.476  INFO 14904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 23:51:02.222  INFO 14904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 23:51:02.264  INFO 14904 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-10 23:51:02.320  INFO 14904 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-10 23:51:02.324  WARN 14904 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-06-10 23:51:02.325  INFO 14904 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-10 23:51:02.335  WARN 14904 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-06-10 23:51:02.336  INFO 14904 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-10 23:51:02.451  WARN 14904 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-10 23:51:02.506  INFO 14904 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-10 23:51:02.640  INFO 14904 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-06-10 23:51:02.840  INFO 14904 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-10 23:51:02.851  INFO 14904 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-10 23:51:03.833  WARN 14904 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-06-10 23:51:03.889  INFO 14904 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-06-10 23:51:03.923  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-06-10 23:51:03.994  INFO 14904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-06-10 23:51:03.995  INFO 14904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-06-10 23:51:04.129  INFO 14904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-06-10 23:51:04.129  INFO 14904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-06-10 23:51:04.355  INFO 14904 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-06-10 23:51:04.662  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-06-10 23:51:04.663  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-06-10 23:51:04.663  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-06-10 23:51:04.663  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-06-10 23:51:04.663  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-06-10 23:51:04.663  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-06-10 23:51:04.663  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-06-10 23:51:04.876  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-06-10 23:51:04.882  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-06-10 23:51:04.885  INFO 14904 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-06-10 23:51:04.914  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1591813264909 with initial instances count: 8
+2020-06-10 23:51:04.922  INFO 14904 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENT-SERVICE with eureka with status UP
+2020-06-10 23:51:04.923  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1591813264923, current=UP, previous=STARTING]
+2020-06-10 23:51:04.932  INFO 14904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENT-SERVICE/BICVPJI1LB.asiapacific.hpqcorp.net:payment-service:8090: registering service...
+2020-06-10 23:51:04.971  WARN 14904 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8090 is already in use
+2020-06-10 23:51:04.976  INFO 14904 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-10 23:51:04.987  INFO 14904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 23:51:04.988  INFO 14904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 23:51:05.009  INFO 14904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENT-SERVICE/BICVPJI1LB.asiapacific.hpqcorp.net:payment-service:8090 - registration status: 204
+2020-06-10 23:51:05.009  INFO 14904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 23:51:05.010  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-06-10 23:51:08.014  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-06-10 23:51:08.019  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENT-SERVICE/BICVPJI1LB.asiapacific.hpqcorp.net:payment-service:8090 - deregister  status: 200
+2020-06-10 23:51:08.036  INFO 14904 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-06-10 23:51:08.037  INFO 14904 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-10 23:51:08.086  INFO 14904 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-10 23:51:08.094 ERROR 14904 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8090 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8090 or configure this application to listen on another port.
+

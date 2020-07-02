@@ -1,0 +1,99 @@
+spring:
+  application:
+    name: API-GATEWAY-SERVICE 
+  cloud:
+    gateway:
+      routes:
+      - id: order-service
+        uri: lb://ORDER-SERVICE
+        predicates:
+          - Path=/orders/**
+        filters:
+        -   name: CircuitBreaker
+            args:
+             name: order-service
+             fallbackuri: forward:/orderServiceFallback
+      - id: payment-service
+        uri: lb://PAYMENT-SERVICE
+        predicates:
+          - Path=/payments/**
+        filters:
+        -   name: CircuitBreaker
+            args:
+             name: payment-service
+             fallbackuri: forward:/paymentServiceFallback
+      - id: delivery-service
+        uri: lb://DELIVERY-SERVICE
+        predicates:
+          - Path=/deliveryServices/**
+        filters:
+        -   name: CircuitBreaker
+            args:
+             name: delivery-service
+             fallbackuri: forward:/deliveryServiceFallback  
+      - id: shipping-service
+        uri: lb://SHIPPING-SERVICE
+        predicates:
+          - Path=/shippingServices/**
+        filters:
+        -   name: CircuitBreaker
+            args:
+             name: shipping-service
+             fallbackuri: forward:/shippingServiceFallback   
+      - id: product-service
+        uri: lb://PRODUCT-SERVICE
+        predicates:
+          - Path=/products/**
+        filters:
+        -   name: CircuitBreaker
+            args:
+             name: products-service
+             fallbackuri: forward:/productServiceFallback  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultzone: http://localhost:8761/eureka/
+  instance:
+   hostname: localhost
+server:
+  port: 8080   
+ 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+hystrix:
+  command:
+    fallbackcmd:
+       execution:
+         isolation:
+          thread:
+            timeoutInMillisec: 2000            
+
+microservice:
+   order-service:
+     endpoints:
+       endpoint:
+         url: http://ORDER-SERVICE/orders
+   payment-service:
+     endpoints:
+       endpoint:
+         url: http://PAYMENT-SERVICE/payments
+   delivery-service:
+     endpoints:
+       endpoint:
+         url: http://DELIVERY-SERVICE/deliveryServices  
+   shipping-service:
+     endpoints:
+       endpoint:
+         url: http://SHIPPING-SERVICE/shippingServices
+   product-service:
+     endpoints:
+       endpoint:
+         url: http://PRODUCT-SERVICE/products                        
+         
+      
+   
