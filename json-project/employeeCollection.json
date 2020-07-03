@@ -1,0 +1,28 @@
+{
+  "employee" : [ {
+    "empID" : 101,
+    "name" : "Jaipal",
+    "email" : "jaipal66kumar@gmail.com",
+    "dob" : "05/11/1990"
+  }, {
+    "empID" : 102,
+    "name" : "Jaipal",
+    "email" : "jaipal66kumar@gmail.com",
+    "dob" : "05/11/1990"
+  }, {
+    "empID" : 103,
+    "name" : "Jaipal",
+    "email" : "jaipal66kumar@gmail.com",
+    "dob" : "05/11/1990"
+  }, {
+    "empID" : 104,
+    "name" : "Jaipal",
+    "email" : "jaipal66kumar@gmail.com",
+    "dob" : "05/11/1990"
+  }, {
+    "empID" : 105,
+    "name" : "Jaipal",
+    "email" : "jaipal66kumar@gmail.com",
+    "dob" : "05/11/1990"
+  } ]
+}
